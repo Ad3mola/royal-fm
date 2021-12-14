@@ -1,32 +1,31 @@
 {
   "expo": {
-    "name": "royal-fm",
+    "name": "Royal FM",
     "slug": "royal-fm",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/app-icon.png",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "image": "./assets/royal-splash.png",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/app-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.ad3mola.royalfm"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/app-icon.png"
     }
   }
 }
