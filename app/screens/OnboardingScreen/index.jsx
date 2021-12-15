@@ -4,32 +4,32 @@ import { View, Text, StyleSheet, Pressable, Image } from "react-native";
 import Onboarding from "react-native-onboarding-swiper";
 import AppIntroSlider from "react-native-app-intro-slider";
 
-const slides = [
-  {
-    key: "one",
-    image: require("../../../assets/onboarding1.png"),
-    title: "Listen Live",
-    text: "Never miss a show, listen to our channel anywhere, anytime",
-    backgroundColor:
-      "linear-gradient(0deg, rgba(255, 250, 224, 0.67), rgba(255, 250, 224, 0.67)), #FFFFFF",
-  },
-  {
-    key: "two",
-    image: require("../../../assets/onboarding2.png"),
-    title: "Schedule Shows",
-    text: "Set reminders for your shows, and get notified",
-    backgroundColor:
-      "linear-gradient(0deg, rgba(255, 250, 224, 0.67), rgba(255, 250, 224, 0.67)), #FFFFFF",
-  },
-  {
-    key: "three",
-    image: require("../../../assets/onboarding3.png"),
-    title: "Switch Frequencies",
-    text: "Switch between our stations",
-    backgroundColor:
-      "linear-gradient(0deg, rgba(255, 250, 224, 0.67), rgba(255, 250, 224, 0.67)), #FFFFFF",
-  },
-];
+// const slides = [
+//   {
+//     key: "one",
+//     image: require("../../../assets/onboarding1.png"),
+//     title: "Listen Live",
+//     text: "Never miss a show, listen to our channel anywhere, anytime",
+//     backgroundColor:
+//       "linear-gradient(0deg, rgba(255, 250, 224, 0.67), rgba(255, 250, 224, 0.67)), #FFFFFF",
+//   },
+//   {
+//     key: "two",
+//     image: require("../../../assets/onboarding2.png"),
+//     title: "Schedule Shows",
+//     text: "Set reminders for your shows, and get notified",
+//     backgroundColor:
+//       "linear-gradient(0deg, rgba(255, 250, 224, 0.67), rgba(255, 250, 224, 0.67)), #FFFFFF",
+//   },
+//   {
+//     key: "three",
+//     image: require("../../../assets/onboarding3.png"),
+//     title: "Switch Frequencies",
+//     text: "Switch between our stations",
+//     backgroundColor:
+//       "linear-gradient(0deg, rgba(255, 250, 224, 0.67), rgba(255, 250, 224, 0.67)), #FFFFFF",
+//   },
+// ];
 
 const Square = ({ isLight, selected }) => {
   let backgroundColor;
@@ -66,7 +66,14 @@ const OnboardingScreen = ({ navigation }) => {
         {
           backgroundColor:
             "linear-gradient(0deg, rgba(255, 250, 224, 0.67), rgba(255, 250, 224, 0.67)), #FFFFFF;",
-          image: <Image source={require("../../../assets/onboarding1.png")} />,
+          image: (
+            <Image
+              style={{ width: 400, height: 400 }}
+              source={{
+                uri: "https://res.cloudinary.com/drkvge86d/image/upload/v1639515729/onboarding1_clgsi3.png",
+              }}
+            />
+          ),
           title: "Listen Live",
           subtitle:
             "Never miss a show, listen to our channel anywhere, anytime",
@@ -74,14 +81,28 @@ const OnboardingScreen = ({ navigation }) => {
         {
           backgroundColor:
             "linear-gradient(0deg, rgba(255, 250, 224, 0.67), rgba(255, 250, 224, 0.67)), #FFFFFF;",
-          image: <Image source={require("../../../assets/onboarding2.png")} />,
+          image: (
+            <Image
+              style={{ width: 400, height: 400 }}
+              source={{
+                uri: "https://res.cloudinary.com/drkvge86d/image/upload/v1639515729/onboarding2_i0idle.png",
+              }}
+            />
+          ),
           title: "Schedule Shows",
           subtitle: "Set reminders for your shows, and get notified",
         },
         {
           backgroundColor:
             "linear-gradient(0deg, rgba(255, 250, 224, 0.67), rgba(255, 250, 224, 0.67)), #FFFFFF;",
-          image: <Image source={require("../../../assets/onboarding3.png")} />,
+          image: (
+            <Image
+              style={{ width: 400, height: 400 }}
+              source={{
+                uri: "https://res.cloudinary.com/drkvge86d/image/upload/v1639515729/onboarding3_or17xm.png",
+              }}
+            />
+          ),
           title: "Switch Frequencies",
           subtitle: "Switch between our stations ",
         },

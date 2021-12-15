@@ -29,7 +29,9 @@ const Programs = ({ channel, item, createTwoButtonAlert }) => {
         </Text>
         <Image
           style={{ height: 40, width: 40, borderRadius: 10, marginRight: 10 }}
-          source={require("../../../assets/play.png")}
+          source={{
+            uri: "https://res.cloudinary.com/drkvge86d/image/upload/v1639515730/play_qvekzh.png",
+          }}
         />
         <View>
           <Text style={{ fontWeight: "bold" }}>{item?.name}</Text>
@@ -39,7 +41,7 @@ const Programs = ({ channel, item, createTwoButtonAlert }) => {
         </View>
       </View>
       <TouchableNativeFeedback onPress={() => createTwoButtonAlert(item)}>
-        <Image source={channel.option} />
+        <Image source={{ uri: channel.option, width: 5, height: 20 }} />
       </TouchableNativeFeedback>
     </View>
   );

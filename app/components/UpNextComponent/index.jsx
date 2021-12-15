@@ -49,7 +49,9 @@ export const UpNextComponent = ({ channel, upNext, setModalVisible }) => {
             height: "100%",
           }}
           resizeMode="cover"
-          source={require("../../../assets/play.png")}
+          source={{
+            uri: "https://res.cloudinary.com/drkvge86d/image/upload/v1639515730/play_qvekzh.png",
+          }}
         ></ImageBackground>
 
         <View
@@ -73,7 +75,7 @@ export const UpNextComponent = ({ channel, upNext, setModalVisible }) => {
             </Text>
           </View>
           <TouchableOpacity onPress={() => setModalVisible(upNext[0])}>
-            <Image source={channel.option} />
+            <Image source={{ uri: channel.option, width: 5, height: 20 }} />
           </TouchableOpacity>
         </View>
       </View>
@@ -97,7 +99,9 @@ export const UpNextComponent = ({ channel, upNext, setModalVisible }) => {
             height: "100%",
           }}
           resizeMode="cover"
-          source={require("../../../assets/play.png")}
+          source={{
+            uri: "https://res.cloudinary.com/drkvge86d/image/upload/v1639515730/play_qvekzh.png",
+          }}
         ></ImageBackground>
         <View
           style={{
@@ -120,7 +124,7 @@ export const UpNextComponent = ({ channel, upNext, setModalVisible }) => {
             </Text>
           </View>
           <TouchableOpacity onPress={() => setModalVisible(upNext[0])}>
-            <Image source={channel.option} />
+            <Image source={{ uri: channel.option, width: 5, height: 20 }} />
           </TouchableOpacity>
         </View>
       </View>

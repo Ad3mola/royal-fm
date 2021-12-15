@@ -25,6 +25,10 @@ const styles = StyleSheet.create({
 const { width, height } = Dimensions.get("window");
 export const UpNext = ({ channel, nextUp, setModalVisible }) => {
   const navigation = useNavigation();
+
+  if (!nextUp.length) {
+    return <View style={{ paddingTop: 430 }}></View>;
+  }
   return (
     <>
       <View
@@ -69,9 +73,11 @@ export const UpNext = ({ channel, nextUp, setModalVisible }) => {
             onPress={() => navigation.navigate("Details")}
           >
             <Image
-              source={require("../../../assets/schedule.png")}
+              source={{
+                uri: "https://res.cloudinary.com/drkvge86d/image/upload/v1639515730/schedule_na3x1n.png",
+              }}
               resizeMode="cover"
-              style={{ height: "100%", marginTop: 8 }}
+              style={{ height: 60, marginTop: 8, width: 60 }}
             />
             <Text
               style={{ color: "#383838", fontSize: 16, fontWeight: "bold" }}

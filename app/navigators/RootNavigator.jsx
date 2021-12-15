@@ -38,7 +38,8 @@ const { width, height } = Dimensions.get("window");
 const slides = [
   {
     key: "one",
-    image: require("../../assets/onboarding1.png"),
+    image:
+      "https://res.cloudinary.com/drkvge86d/image/upload/v1639515729/onboarding1_clgsi3.png",
     title: "Listen Live",
     text: "Never miss a show, listen to our channel anywhere, anytime",
     backgroundColor:
@@ -46,7 +47,8 @@ const slides = [
   },
   {
     key: "two",
-    image: require("../../assets/onboarding2.png"),
+    image:
+      "https://res.cloudinary.com/drkvge86d/image/upload/v1639515729/onboarding2_i0idle.png",
     title: "Schedule Shows",
     text: "Set reminders for your shows, and get notified",
     backgroundColor:
@@ -54,7 +56,8 @@ const slides = [
   },
   {
     key: "three",
-    image: require("../../assets/onboarding3.png"),
+    image:
+      "https://res.cloudinary.com/drkvge86d/image/upload/v1639515729/onboarding3_or17xm.png",
     title: "Switch Frequencies",
     text: "Switch between our stations",
     backgroundColor:
@@ -194,22 +197,21 @@ const RootNavigator = ({ showRealApp, setShowRealApp }) => {
   }, []);
 
   async function playSound(custom) {
-    // console.log("BOTH", custom, sound);
-    // if (!sound && !custom) {
+    const audioMode = {
+      stayActiveInBackground: true,
+      interruptionModeAndroid: Audio.INTERRUPTION_MODE_ANDROID_DO_NOT_MIX,
+    };
+    Audio.setAudioModeAsync(audioMode);
+
     const { sound } = await Audio.Sound.createAsync({
       uri: custom ? custom : `${channel.url}`,
     });
     setSound(sound);
-    // }
-
-    // console.log("Playing Sound");
     setIsPlaying(true);
-    // setPanelPosition(0);
     await sound.playAsync();
   }
 
   async function playAfterPause() {
-    // setPanelPosition(0);
     await sound.playAsync();
     setIsPlaying(true);
   }
@@ -337,11 +339,19 @@ const RootNavigator = ({ showRealApp, setShowRealApp }) => {
                     </Text>
                   </View>
                   <View>
-                    <Image source={require("../../assets/down.png")} />
+                    <Image
+                      source={{
+                        uri: "https://res.cloudinary.com/drkvge86d/image/upload/v1639515727/down_syasjz.png",
+                      }}
+                      style={{ width: 20, height: 20 }}
+                    />
                   </View>
                 </View>
               );
             } else {
+              if (!isPlaying) {
+                return null;
+              }
               return (
                 <>
                   <View
@@ -350,7 +360,6 @@ const RootNavigator = ({ showRealApp, setShowRealApp }) => {
                       flexDirection: "row",
                       justifyContent: "space-between",
                       paddingHorizontal: 15,
-                      // display: !isPlaying ? "none" : "flex",
                     }}
                   >
                     <View
@@ -363,7 +372,9 @@ const RootNavigator = ({ showRealApp, setShowRealApp }) => {
                           borderRadius: 50,
                           marginRight: 20,
                         }}
-                        source={require("../../assets/play.png")}
+                        source={{
+                          uri: "https://res.cloudinary.com/drkvge86d/image/upload/v1639515730/play_qvekzh.png",
+                        }}
                       />
                       <View>
                         <Text
@@ -392,7 +403,10 @@ const RootNavigator = ({ showRealApp, setShowRealApp }) => {
                     >
                       <Image
                         resizeMode="cover"
-                        source={isPlaying ? channel.stop : channel.play}
+                        style={{ width: 20, height: 20 }}
+                        source={{
+                          uri: isPlaying ? channel.stop : channel.play,
+                        }}
                       />
                     </TouchableWithoutFeedback>
                   </View>
@@ -447,7 +461,9 @@ const RootNavigator = ({ showRealApp, setShowRealApp }) => {
                   }}
                 >
                   <Image
-                    source={require("../../assets/play.png")}
+                    source={{
+                      uri: "https://res.cloudinary.com/drkvge86d/image/upload/v1639515730/play_qvekzh.png",
+                    }}
                     style={{
                       height: "100%",
                       width: "100%",
@@ -465,8 +481,12 @@ const RootNavigator = ({ showRealApp, setShowRealApp }) => {
                   {live[0]?.name}
                 </Text>
                 <Image
-                  style={{ height: 60, marginVertical: 20 }}
-                  source={channel.stream}
+                  style={{
+                    height: 50,
+                    marginVertical: 20,
+                    width: "90%",
+                  }}
+                  source={{ uri: channel.stream }}
                 />
                 <Text
                   style={{
@@ -483,7 +503,9 @@ const RootNavigator = ({ showRealApp, setShowRealApp }) => {
                   <Image
                     style={{ height: 50, width: 50, marginTop: 10 }}
                     resizeMode="cover"
-                    source={isPlaying ? channel.pauseIcon : channel.playIcon}
+                    source={{
+                      uri: isPlaying ? channel.pauseIcon : channel.playIcon,
+                    }}
                   />
                 </TouchableWithoutFeedback>
               </View>

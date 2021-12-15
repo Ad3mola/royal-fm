@@ -45,7 +45,9 @@ const HomeScreen = ({
       >
         <Image
           style={styles.logo}
-          source={require("../../../assets/logo.png")}
+          source={{
+            uri: "https://res.cloudinary.com/drkvge86d/image/upload/v1639515728/logo_bpleg7.png",
+          }}
         />
       </View>
       <ScrollView>
@@ -98,11 +100,16 @@ const HomeScreen = ({
                   height: "100%",
                 }}
                 resizeMode="cover"
-                source={require("../../../assets/play.png")}
+                source={{
+                  uri: "https://res.cloudinary.com/drkvge86d/image/upload/v1639515730/play_qvekzh.png",
+                }}
               >
                 <View>
                   <Image
-                    source={isPlaying ? channel.pauseIcon : channel.playIcon}
+                    style={{ width: 50, height: 50 }}
+                    source={{
+                      uri: isPlaying ? channel.pauseIcon : channel.playIcon,
+                    }}
                   />
                 </View>
               </ImageBackground>

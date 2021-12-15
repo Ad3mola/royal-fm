@@ -44,7 +44,9 @@ const DetailScreen = ({
           </Text>
           <Image
             style={{ height: 40, width: 40, borderRadius: 10, marginRight: 10 }}
-            source={require("../../../assets/play.png")}
+            source={{
+              uri: "https://res.cloudinary.com/drkvge86d/image/upload/v1639515730/play_qvekzh.png",
+            }}
           />
           <View>
             <Text style={{ fontWeight: "bold" }}>{item.name}</Text>
@@ -54,7 +56,10 @@ const DetailScreen = ({
           </View>
         </View>
         <TouchableWithoutFeedback onPress={() => createTwoButtonAlert(item)}>
-          <Image source={channel.option} />
+          <Image
+            source={{ uri: channel.option }}
+            style={{ width: 5, height: 20 }}
+          />
         </TouchableWithoutFeedback>
       </View>
     );
@@ -85,7 +90,12 @@ const DetailScreen = ({
           }}
         >
           <TouchableNativeFeedback onPress={() => navigation.navigate("Home")}>
-            <Image source={require("../../../assets/goBack.png")} />
+            <Image
+              style={{ width: 15, height: 15 }}
+              source={{
+                uri: "https://res.cloudinary.com/drkvge86d/image/upload/v1639515727/goBack_temp3a.png",
+              }}
+            />
           </TouchableNativeFeedback>
           <Text
             style={{
@@ -203,7 +213,12 @@ const DetailScreen = ({
           }}
         >
           <Text style={{ color: "#FF4545", fontWeight: "bold" }}>Live</Text>
-          <Image source={require("../../../assets/live.png")} />
+          <Image
+            style={{ width: 20, height: 20 }}
+            source={{
+              uri: "https://res.cloudinary.com/drkvge86d/image/upload/v1639515728/live_pvoqdu.png",
+            }}
+          />
         </View>
         <View
           style={{
