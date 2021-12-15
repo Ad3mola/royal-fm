@@ -22,7 +22,6 @@
         "foregroundImage": "./assets/app-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "enableDangerousExperimentalLeanBuilds": true,
       "package": "com.ad3mola.royalfm"
     },
     "web": {
