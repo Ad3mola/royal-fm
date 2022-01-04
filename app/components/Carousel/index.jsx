@@ -91,12 +91,13 @@ const styles = StyleSheet.create({
   },
 });
 
-export const MyCarousel = ({ setChannel, playSound }) => {
+export const MyCarousel = ({ setChannel, playSound, pauseSound }) => {
   const carousel = useRef();
 
   const [index, setIndex] = useState(1);
 
   const getChannel = (index) => {
+    pauseSound();
     setChannel(images[index]);
     playSound(images[index].url);
   };

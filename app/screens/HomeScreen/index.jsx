@@ -29,6 +29,7 @@ const HomeScreen = ({
   createTwoButtonAlert,
   isPlaying,
   playAfterPause,
+  pauseSound,
 }) => {
   const [modalVisible, setModalVisible] = useState(false);
 
@@ -66,10 +67,14 @@ const HomeScreen = ({
               paddingTop: 15,
             }}
           >
-            Channels
+            Stations
           </Text>
           <View>
-            <MyCarousel setChannel={setChannel} playSound={playSound} />
+            <MyCarousel
+              setChannel={setChannel}
+              playSound={playSound}
+              pauseSound={pauseSound}
+            />
           </View>
           <View
             style={{
@@ -83,7 +88,7 @@ const HomeScreen = ({
               borderRadius: 10,
               position: "absolute",
               top: 200,
-              left: width / 6,
+              left: width / 2 - 120,
               zIndex: 1050,
             }}
           >

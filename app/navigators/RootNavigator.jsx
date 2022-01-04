@@ -198,8 +198,13 @@ const RootNavigator = ({ showRealApp, setShowRealApp }) => {
 
   async function playSound(custom) {
     const audioMode = {
-      stayActiveInBackground: true,
+      staysActiveInBackground: true,
       interruptionModeAndroid: Audio.INTERRUPTION_MODE_ANDROID_DO_NOT_MIX,
+      shouldDuckAndroid: true,
+      playThroughEarpieceAndroid: true,
+      allowsRecordingIOS: true,
+      interruptionModeIOS: Audio.INTERRUPTION_MODE_IOS_DO_NOT_MIX,
+      playsInSilentModeIOS: true,
     };
     Audio.setAudioModeAsync(audioMode);
 
@@ -286,6 +291,7 @@ const RootNavigator = ({ showRealApp, setShowRealApp }) => {
                 createTwoButtonAlert={createTwoButtonAlert}
                 isPlaying={isPlaying}
                 playAfterPause={playAfterPause}
+                pauseSound={pauseSound}
               />
             )}
           </Stack.Screen>

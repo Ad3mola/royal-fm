@@ -26,7 +26,7 @@ export const UpNextComponent = ({ channel, upNext, setModalVisible }) => {
       style={{
         flexDirection: "row",
         alignItems: "center",
-        justifyContent: "space-between",
+        justifyContent: "center",
       }}
     >
       <View
@@ -38,6 +38,8 @@ export const UpNextComponent = ({ channel, upNext, setModalVisible }) => {
           elevation: 2,
           borderRadius: 10,
           backgroundColor: "white",
+          marginRight: 12,
+          // marginHorizontal: 10,
         }}
       >
         <ImageBackground
@@ -88,6 +90,7 @@ export const UpNextComponent = ({ channel, upNext, setModalVisible }) => {
           elevation: 2,
           borderRadius: 10,
           backgroundColor: "white",
+          // marginHorizontal: 10,
         }}
       >
         <ImageBackground
