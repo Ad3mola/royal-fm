@@ -8,7 +8,7 @@ const { width, height } = Dimensions.get("window");
 const images = [
   {
     image:
-      "https://res.cloudinary.com/drkvge86d/image/upload/v1639515727/kaduna_ynoxiz.png",
+      "https://res.cloudinary.com/drkvge86d/image/upload/v1654522434/kaduna_rn3wtx.png",
     color: "#CCE7D4",
     bgColor: "#14804B",
     name: "kaduna",
@@ -20,7 +20,7 @@ const images = [
       "https://res.cloudinary.com/drkvge86d/image/upload/v1639515728/kaduna-play_qeoxyg.png",
     pauseIcon:
       "https://res.cloudinary.com/drkvge86d/image/upload/v1639515728/kaduna-pause_emdsil.png",
-    url: "http://197.210.168.147:8001/stream1",
+    url: "http://197.210.168.147:8000/rfmkaduna",
     stream:
       "https://res.cloudinary.com/drkvge86d/image/upload/v1639515728/kaduna-stream_b0hcz9.png",
   },
@@ -44,7 +44,7 @@ const images = [
   },
   {
     image:
-      "https://res.cloudinary.com/drkvge86d/image/upload/v1639515726/asaba_eldew8.png",
+      "https://res.cloudinary.com/drkvge86d/image/upload/v1654522434/asaba_jzagiy.png",
     color: "#BFE7FA",
     bgColor: "#129CD4",
     name: "asaba",
@@ -56,7 +56,7 @@ const images = [
       "https://res.cloudinary.com/drkvge86d/image/upload/v1639515726/asaba-play_u2uw5e.png",
     pauseIcon:
       "https://res.cloudinary.com/drkvge86d/image/upload/v1639515726/asaba-pause_ukb0qp.png",
-    url: "http://197.210.168.147:8001/stream1",
+    url: "http://197.210.168.147:8000/rfmdelta",
     stream:
       "https://res.cloudinary.com/drkvge86d/image/upload/v1639515727/asaba-stream_gma54m.png",
   },
@@ -77,6 +77,24 @@ const images = [
     url: "http://197.210.168.147:8001/stream1",
     stream:
       "https://res.cloudinary.com/drkvge86d/image/upload/v1639515727/asaba-stream_gma54m.png",
+  },
+  {
+  image:
+      "https://res.cloudinary.com/drkvge86d/image/upload/v1654522434/borgu_sg2qr8.png",
+    color: "#CCE7D4",
+    bgColor: "#14804B",
+    name: "new bussa",
+    option:
+      "https://res.cloudinary.com/drkvge86d/image/upload/v1639515727/kaduna-options_gx1nd6.png",
+    stop: "https://res.cloudinary.com/drkvge86d/image/upload/v1639515730/stop_j8uizk.png",
+    play: "https://res.cloudinary.com/drkvge86d/image/upload/v1639515729/playIcon_ezxz7v.png",
+    playIcon:
+      "https://res.cloudinary.com/drkvge86d/image/upload/v1639515728/kaduna-play_qeoxyg.png",
+    pauseIcon:
+      "https://res.cloudinary.com/drkvge86d/image/upload/v1639515728/kaduna-pause_emdsil.png",
+    url: "http://197.210.168.147:8000/rfmnewbussa",
+    stream:
+      "https://res.cloudinary.com/drkvge86d/image/upload/v1639515728/kaduna-stream_b0hcz9.png",
   },
 ];
 
